@@ -88,7 +88,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\0.png" />
+    <Content Include="Images\1.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
