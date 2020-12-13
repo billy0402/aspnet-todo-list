@@ -19,5 +19,23 @@ namespace aspnet_todo_list.Controllers
 
             return View(todos);
         }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(string fTitle, string fImage, DateTime fDate)
+        {
+            tToDo todo = new tToDo();
+            todo.fTitle = fTitle;
+            todo.fImage = fImage;
+            todo.fDate = fDate;
+            db.tToDo.Add(todo);
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }
